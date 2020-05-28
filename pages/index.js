@@ -1,7 +1,11 @@
+import Head from "next/head";
 import Header from "../components/header";
 
 const Home = props => (
   <>
+    <Head>
+      <meta name="dupa" />
+    </Head>
     <Header />
     <h1>Hello World!</h1>
     <h3>{props.text}</h3>
