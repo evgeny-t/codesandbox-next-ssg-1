@@ -10,8 +10,8 @@ const Home = props => (
 
 export default Home;
 
-export function getStaticProps() {
-  const props = import("../data.json").default;
+export async function getStaticProps() {
+  const props = (await import("../data.json")).default;
   console.log("props", props);
   return {
     props
