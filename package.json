@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
-    "build": "node build.js && next build && next export",
-    "start": "next start"
+    "build": "node build.js && next build",
+    "start": "next dev"
   },
   "license": "ISC",
   "dependencies": {

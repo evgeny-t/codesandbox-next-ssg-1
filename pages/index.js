@@ -1,23 +1,25 @@
-import Head from "next/head";
-import Header from "../components/header";
+import Link from 'next/link'
+import { readJsonSync } from 'fs-extra'
+import { resolve } from 'path'
 
-const Home = props => (
+const Home = ({ posts }) => (
   <>
-    <Head>
-      <meta name="dupa" />
-    </Head>
-    <Header />
-    <h1>Hello World!</h1>
-    <h3>{props.text}</h3>
+    {posts.map(({ slug, title }) => (
+      <div key={slug}>
+        <Link as={`/post/${slug}`} href="/post/[slug]">
+          <a>{title}</a>
+        </Link>
+      </div>
+    ))}
   </>
 );
 
 export default Home;
 
 export async function getStaticProps() {
-  const props = (await import("../data.json")).default;
-  console.log("props", props);
+  const posts = readJsonSync(resolve('data.json'))
+
   return {
-    props
+    props: { posts }
   };
 }
