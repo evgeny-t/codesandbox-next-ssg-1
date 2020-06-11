@@ -1,6 +1,9 @@
 {
   "name": "ssg-test",
   "version": "1.0.0",
+  "engines": {
+    "node": "10"
+  },
   "scripts": {
     "dev": "next",
     "build": "ts-node -P tsconfig.server.json build.ts && next build",
