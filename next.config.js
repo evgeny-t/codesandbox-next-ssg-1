@@ -7,10 +7,10 @@ module.exports = {
                 path: "empty",
             };
             // https://github.com/zeit/next.js/issues/2069#issuecomment-593847441
-            //   config.module.rules.push({
-            //     test: /fs-extra/,
-            //     use: "null-loader",
-            //   })
+            config.module.rules.push({
+                test: /fs-extra/,
+                use: "null-loader",
+            })
         }
         return config;
     },
