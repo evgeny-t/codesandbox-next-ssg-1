@@ -1,6 +1,16 @@
 import Link from "next/link";
+import styled from "styled-components";
 
 import { make } from "../../src/utils";
+
+const Main = styled.main`
+  width: 50vh;
+  height: 50vh;
+  display: grid;
+  & > * {
+    margin: auto;
+  }
+`;
 
 const Post = ({ title, text }) => {
   return (
@@ -11,7 +21,9 @@ const Post = ({ title, text }) => {
         </Link>
       </i>
       <h1>{title}</h1>
-      <main>{text}</main>
+      <Main>
+        <span>{text}</span>
+      </Main>
     </>
   );
 };
