@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  & article {
+    outline: 3px dashed darkcyan;
+  }
+}
+
+#__next {
+  position: relative;
+}
+
+$be-primary: #e86589;
+$be-brand: #5ac4bc;
+
+$primary: $be-primary;
+$info: $be-brand;
+$pagination-current-background-color: $primary;
+$pagination-current-border-color: $primary;
+
+@import "~bulma/bulma";
+
+@mixin forBreakpoint($breakpoint) {
+  @for $i from 1 through 12 {
+    &.is-#{$i}-#{$breakpoint} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+
+.tile {
+  @include tablet {
+    @include forBreakpoint("tablet");
+  }
+  @include desktop {
+    @include forBreakpoint("desktop");
+  }
+  @include widescreen {
+    @include forBreakpoint("widescreen");
+  }
+  @include fullhd {
+    @include forBreakpoint("fullhd");
+  }
+}
+
+::selection {
+  background: $be-primary;
+  color: white;
+}
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  & article {
+    outline: 3px dashed darkcyan;
+  }
+}
+
+#__next {
+  position: relative;
+}
+
+$be-primary: #e86589;
+$be-brand: #5ac4bc;
+
+$primary: $be-primary;
+$info: $be-brand;
+$pagination-current-background-color: $primary;
+$pagination-current-border-color: $primary;
+
+@import "~bulma/bulma";
+
+@mixin forBreakpoint($breakpoint) {
+  @for $i from 1 through 12 {
+    &.is-#{$i}-#{$breakpoint} {
+      width: ($i / 12) * 100%;
+    }
+  }
+}
+
+.tile {
+  @include tablet {
+    @include forBreakpoint("tablet");
+  }
+  @include desktop {
+    @include forBreakpoint("desktop");
+  }
+  @include widescreen {
+    @include forBreakpoint("widescreen");
+  }
+  @include fullhd {
+    @include forBreakpoint("fullhd");
+  }
+}
+
+::selection {
+  background: $be-primary;
+  color: white;
+}
+
+.has-brand-color {
+  background: $be-brand;
+}
+
+.navbar-burger {
+  align-self: center;
+  margin-right: 1em;
+}
+
+.Primary {
+  color: $be-primary;
+
+  &:hover {
+    color: $be-primary;
+  }
+}
+
+.GreyDark {
+  color: $grey-dark;
+  &:hover {
+    color: $grey-dark;
+  }
+}
+
+.Brand {
+  color: $be-brand;
+  &:hover {
+    color: $be-brand;
+  }
+}
+
+.has-brand-color {
+  background: $be-brand;
+}
+
+.navbar-burger {
+  align-self: center;
+  margin-right: 1em;
+}
+
+.Primary {
+  color: $be-primary;
+
+  &:hover {
+    color: $be-primary;
+  }
+}
+
+.GreyDark {
+  color: $grey-dark;
+  &:hover {
+    color: $grey-dark;
+  }
+}
+
+.Brand {
+  color: $be-brand;
+  &:hover {
+    color: $be-brand;
+  }
+}
