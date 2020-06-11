@@ -16,6 +16,10 @@ module.exports = withPlugins(
         withSass
     ],
     {
+        exportTrailingSlash: true,
+        env: {
+            dev: process.env.NODE_ENV !== 'production'
+        },
 
         webpack(config, { isServer }) {
             if (!isServer) {
