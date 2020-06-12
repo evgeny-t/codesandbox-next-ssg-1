@@ -42,7 +42,7 @@ export default class extends Document {
     return (
       <Html lang="ru">
         <Head>
-          <script
+          <noscript
             dangerouslySetInnerHTML={{
               __html: `(${f.toString()})()`,
             }}
