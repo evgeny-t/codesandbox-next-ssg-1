@@ -8,6 +8,10 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
+function f() {
+  console.log(43);
+}
+
 export default class extends Document {
   static async getInitialProps(
     ctx: DocumentContext
@@ -40,7 +44,7 @@ export default class extends Document {
         <Head>
           <script
             dangerouslySetInnerHTML={{
-              __html: `console.log(42)`,
+              __html: `(${f.toString()})()`,
             }}
           />
         </Head>
