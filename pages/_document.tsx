@@ -12,6 +12,8 @@ function f() {
   console.log(43);
 }
 
+const id = 1000;
+
 export default class extends Document {
   static async getInitialProps(
     ctx: DocumentContext
@@ -42,11 +44,15 @@ export default class extends Document {
     return (
       <Html lang="ru">
         <Head>
-          <noscript
-            dangerouslySetInnerHTML={{
-              __html: `(${f.toString()})()`,
-            }}
-          />
+          <noscript>
+            <div>
+              <img
+                src={`https://mc.yandex.ru/watch/${id}`}
+                style={{ position: "absolute", left: -9999 }}
+                alt=""
+              />
+            </div>
+          </noscript>
         </Head>
         <body>
           <Main />
