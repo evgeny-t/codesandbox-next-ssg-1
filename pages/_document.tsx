@@ -37,7 +37,13 @@ export default class extends Document {
   render() {
     return (
       <Html lang="ru">
-        <Head>{process.env.dev ? null : <></>}</Head>
+        <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `console.log(42)`,
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
