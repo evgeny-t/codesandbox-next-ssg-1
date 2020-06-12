@@ -44,7 +44,7 @@ export default class extends Document {
     return (
       <Html lang="ru">
         <Head>
-          <noscript>
+          <noscript key="dupa">
             <div>
               <img
                 src={`https://mc.yandex.ru/watch/${id}`}
