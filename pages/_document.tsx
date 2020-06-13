@@ -42,7 +42,7 @@ export default class extends Document {
   }
   render() {
     return (
-      <Html lang="ru">
+      <Html>
         <Head>
           <noscript key="dupa">
             <div>
