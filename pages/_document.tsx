@@ -44,6 +44,21 @@ export default class extends Document {
     return (
       <Html>
         <Head>
+          <meta property="og:title" content="Static Fun" />
+          <meta
+            property="og:description"
+            content="claim any subdomain and have fun!"
+          />
+          <meta
+            property="og:image"
+            content="https://www.static.fun/static/twitter-card.png"
+          />
+          <meta property="og:url" content="https://www.static.fun" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <script
+            key="google.gtag"
+            dangerouslySetInnerHTML={{ __html: `console.log('gtag')` }}
+          />
           <noscript key="dupa">
             <div>
               <img
